@@ -45,4 +45,9 @@ resource "azurerm_kubernetes_cluster" "default" {
     network_plugin    = "azure"
     load_balancer_sku = "standard"
   }
+  addon_profile {
+    oms_agent {
+      enabled = true
+    }
+  }
 }
